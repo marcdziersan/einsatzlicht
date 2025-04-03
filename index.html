@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Wer hilft, wenn's brennt?</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+    #container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .scene {
+      font-size: 2.2vmax;
+      text-align: center;
+      max-width: 80%;
+      opacity: 0;
+      position: absolute;
+      transition: opacity 3s;
+      line-height: 1.6;
+    }
+    .active {
+      opacity: 1;
+    }
+    .time {
+      font-size: 1.2vmax;
+      color: #aaa;
+      margin-bottom: 1vmax;
+    }
+    .highlight {
+      color: #ff5555;
+      font-weight: bold;
+    }
+    .story {
+      margin: 2vmax 0;
+      text-align: left;
+      padding: 0 10%;
+    }
+    .heartbeat {
+      animation: heartbeat 1.5s infinite;
+    }
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.05); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+<div id="container">
+    <!-- Szene 0 - Intro -->
+<div class="scene" id="scene0">
+    <div class="time">Einsatzbereit. Immer.</div>
+    <div class="story" style="text-align: center;">
+      <span style="font-size: 1.5em; display: block; margin-bottom: 20px;">✦</span>
+      In einer Welt, die schlafen geht,
+      bleiben <span class="highlight">ihre Augen offen</span>.<br><br>
+      
+      Wenn Gefahr ruft,
+      ist ihr <span class="highlight">"Ich komme!"</span> schon unterwegs,<br>
+      bevor wir <span class="highlight">"Hilfe!"</span> rufen können.<br><br>
+      
+      Dies sind ihre Geschichten.<br>
+      Die Geschichten derer,<br>
+      die kommen, wenn alle anderen gehen.<br><br>
+      
+      <span style="font-size: 1.3em; letter-spacing: 2px;">
+        EINSATZKRÄFTE
+      </span>
+    </div>
+  </div>
+  <!-- Szene 1 - Verkehrsunfall -->
+  <div class="scene" id="scene1">
+    <div class="time">23:17 Uhr - Verkehrsunfall auf der B27</div>
+    <div class="story">
+      Das Handy klingelt mitten in der Nacht. 
+      "Sind Sie die Mutter von Tim Müller?" 
+      Ihre Knie werden weich, als Sie die Stimme der Rettungssanitäterin hört. 
+      "Ihr Sohn hatte einen Unfall, aber er ist bei Bewusstsein. Wir kümmern uns um ihn."<br><br>
+      Während Sie sich im Schlafanzug ins Auto stürzt, kämpft ein junger Notarzt um die Stabilisierung des Beins, 
+      das im Blech des Fahrzeugs eingeklemmt ist. Der Geruch nach Benzin liegt in der Luft. "Noch 2 Minuten bis 
+      zur Befreiung", ruft die Feuerwehr durch das Knirschen der Schere.<br><br>
+      <span class="highlight">In diesem Moment sind es nicht "die Einsatzkräfte" - es sind Menschen wie 
+        Marco, 28, der eigentlich heute Geburtstag feiern wollte, und Sarah, 35, die selbst zwei Kinder zu Hause hat.</span>
+    </div>
+  </div>
+
+  <!-- Szene 2 - Brand -->
+  <div class="scene" id="scene2">
+    <div class="time">03:42 Uhr - Wohnungsbrand in der Gartenstraße</div>
+    <div class="story">
+      Ein kurzes Knistern, dann der beißende Geruch. Bevor Familie Schneider reagieren kann, schlägt ihnen dicker Rauch entgegen. 
+      "Sophie! Wo ist Sophie?" Die 6-Jährige schläft im hintersten Zimmer.<br><br>
+      Draußen hört man schon die Sirenen. Feuerwehrfrau Lena denkt nicht an ihre eigene Tochter im gleichen Alter, als sie ihr Atemschutz anlegt. 
+      "Ich geh rein", sagt sie nur, während ihr Kollege den Schlauch vorbereitet. Die Hitze ist selbst durch die Schutzausrüstung zu spüren, als 
+      sie sich durch den Flur tastet.<br><br>
+      <span class="highlight">Was geht in jemandem vor, der weiß, dass sein eigenes Kind vielleicht nie mehr "Mama" sagen hören wird - und trotzdem losrennt?</span>
+    </div>
+  </div>
+
+  <!-- Szene 3 - Herzinfarkt -->
+  <div class="scene" id="scene3">
+    <div class="time">12:35 Uhr - Herzinfarkt im Supermarkt</div>
+    <div class="story">
+      Herr Jansen wollte nur Milch kaufen. Plötzlich dieser stechende Schmerz in der Brust. Er greift nach einem Regal, geht langsam zu Boden. 
+      Umstehende starren, einer filmt mit dem Handy.<br><br>
+      Bis Sanitäterin Aylin durch die Drehtür stürmt. Ihr Übungskick vom Wochenende ist noch in den Muskeln, aber sie zögert keine Sekunde. 
+      "Defi ist unterwegs!", ruft sie ihrem Kollegen zu, während sie schon die Herzdruckmassage beginnt. Eins, zwei, drei... bis 30. Atemspende. 
+      Wieder von vorn. Ihre Hände zittern später im Auto.<br><br>
+      <span class="highlight">Sie wissen nie, ob es reicht. Aber sie versuchen es jedes Mal, als wäre es ihr eigener Opa.</span>
+    </div>
+  </div>
+
+  <!-- Szene 4 - Hochwasser -->
+  <div class="scene" id="scene4">
+    <div class="time">05:23 Uhr - Hochwasser in der Altstadt</div>
+    <div class="story">
+      Das Wasser steigt schneller als gedacht. Frau Behrendt, 82, steht bis zu den Knien in der dunklen Brühe ihres Wohnzimmers. 
+      "Meine Fotos... die Briefe meines Mannes..." Die Stimme der Feuerwehr am Telefon bleibt ruhig: "Wir kommen Sie holen, bleiben Sie wo Sie sind!"<br><br>
+      Zwei junge Feuerwehrmänner wandern durch die überflutete Straße. Einer von ihnen hat seit 18 Stunden kein Bett gesehen. 
+      "Hier! Erste Etage!" Sie tragen die alte Dame im Trupp durch die reißende Strömung. Einer rutscht aus, hält sie aber fest umklammert. 
+      "Ich lass nicht los", keucht er.<br><br>
+      <span class="highlight">Was würden Sie opfern, um fremde Erinnerungen zu retten?</span>
+    </div>
+  </div>
+
+  <!-- Szene 5 - Gewalttat -->
+  <div class="scene" id="scene5">
+    <div class="time">21:08 Uhr - Messerstecherei am Bahnhof</div>
+    <div class="story">
+      "Notarzt sofort!" Schreie hallen durch die Bahnhofshalle. Ein junger Mann blutet aus einer Stichwunde am Hals. Daneben steht der Täter, selbst verletzt, 
+      die Hände blutverschmiert.<br><br>
+      Sanitäter Markus sieht sofort: Beide müssen versorgt werden. Während er dem Schwerverletzten die Atemwege sichert, denkt er an die Hasskommentare unter dem 
+      letzten Einsatzvideo. "Warum hilfst du dem?", faucht ein Passant. Markus antwortet nicht. Er macht einfach weiter. Wie immer.<br><br>
+      <span class="highlight">Ihr Job ist es nicht zu richten. Ihr Job ist es, Leben zu retten. Alle Leben.</span>
+    </div>
+  </div>
+
+  <!-- Szene 6 - Die Wartenden -->
+  <div class="scene" id="scene6">
+    <div class="time">22:13 Uhr - Küche einer Einsatzkraft</div>
+    <div class="story">
+      "Papa, wann kommt Mama endlich?" Der kleine Finn fragt es zum dritten Mal heute Abend. Sein Vater schaut auf die Uhr. 
+      23 Minuten über Dienstende. Keine Nachricht.<br><br>
+      Das Handy liegt neben dem Weinglas. Kein Klingeln. Nur die Nachrichten-App zeigt "online" an. Warum schreibt sie nicht? 
+      Die letzte Meldung war "Alarm - Großbrand". Er googelt stumm die Adresse. Schlägt die Zeitung auf. Zündet eine Kerze an.<br><br>
+      <span class="highlight">In tausend Küchen brennt heute diese Kerze. Für Menschen, die lieber warten, als zu schlafen.</span>
+    </div>
+  </div>
+
+  <!-- Szene 7 - Der Abschied -->
+  <div class="scene" id="scene7">
+    <div class="time">06:47 Uhr - Umkleide der Feuerwache</div>
+    <div class="story">
+      Martins Hand zögert über der Jacke. Heute ist der Jahrestag. Der Tag, an dem sein bester Freund nicht zurückkam. 
+      Ein simpler Küchenbrand. Einsturz. Kein Alarm.<br><br>
+      Er atmet tief durch, spürt das <span class="heartbeat">Klopfen</span> in seiner Brust. "Nicht heute", flüstert er sich zu. 
+      Die Kollegen lachen schon im Hof. Er muss raus. Die Tür fällt ins Schloss. Irgendwo klingelt ein Telefon.<br><br>
+      <span class="highlight">Jeder Einsatz beginnt mit einem Abschied, von dem man nie weiß - ist es der letzte?</span>
+    </div>
+  </div>
+
+  <!-- Szene 8 - Der Anruf -->
+  <div class="scene" id="scene8">
+    <div class="time">09:12 Uhr - Ein Wohnzimmer irgendwo</div>
+    <div class="story">
+      Das Telefon klingelt anders. Das spürt man sofort. Die Frau sieht schon die zwei Uniformen durch das Flurfenster, bevor sie öffnet. 
+      "Nein", sagt sie, bevor der erste Satz zu Ende ist.<br><br>
+      Auf dem Kaminsims: Ein Foto von lachenden Kindern auf Papas Schultern. Die Kaffeetasse daneben ist noch warm. Die jüngere Tochter 
+      fragt: "Mama? Warum weinst du?" Die ältere versteht schon. Sie schreit.<br><br>
+      <span class="highlight">Manche Einsätze enden in Wohnzimmern. Mit Tränen. Mit leeren Stühlen. Mit Fragen.</span>
+    </div>
+  </div>
+
+  <!-- Szene 9 - Appell Teil 1 -->
+<div class="scene" id="scene9">
+    <div class="time">Jeden Tag. Jede Nacht. Immer.</div>
+    <div class="story">
+      Während Sie schlafen, hält jemand Wache.<br>
+      Wenn Sie feiern, steht jemand bereit.<br>
+      In Ihrer schlimmsten Angst kommt jemand.<br><br>
+      
+      <span class="highlight">Diese Menschen haben Namen. Sie haben Familien. Sie haben Angst.</span><br><br>
+      
+      Und doch gehen sie hin.<br>
+      Weil jemand gehen muss.<br>
+      Weil sie glauben, dass jedes Leben zählt.<br><br>
+      
+      Nächstes Mal, wenn Sie Blaulicht sehen:<br>
+      Denken Sie an Marco und Sarah am Unfallort.<br>
+      An Lena im brennenden Haus.<br>
+      An Aylin, die zitternd Leben zurückholt.
+    </div>
+  </div>
+  
+  <!-- Szene 10 - Appell Teil 2 -->
+  <div class="scene" id="scene10">
+    <div class="time">Sie geben, was wir nicht können</div>
+    <div class="story">
+      Denken Sie an Finns wartenden Vater.<br>
+      An Martins zögernde Hand.<br>
+      An die Frau, die heute ihr "Nein" nicht mehr zurücknehmen kann.<br><br>
+      
+      Denken Sie an die leeren Stühle bei Familienfeiern.<br>
+      An die ungesagten "Ich liebe dich"s.<br>
+      An die Tage, die nie mehr kommen werden.<br><br>
+      
+      <span class="highlight">Respekt ist kein Dankeschön.<br> 
+      Es ist das Mindeste, was wir geben können -<br>
+      für die, die alles geben.</span>
+    </div>
+  </div>
+
+<!-- Szene 11 - Danke Teil 1 -->
+<div class="scene" id="scene11">
+    <div class="time">Danke an unsere Retter</div>
+    <div class="story" style="text-align: center;">
+      An die <span class="highlight">Retter in Uniform</span>:<br>
+      - Feuerwehrleute, die in Flammen rennen<br>
+      - Rettungssanitäter, die Leben zurückholen<br>
+      - Notärzte, die über Tod entscheiden müssen<br><br>
+      
+      An die <span class="highlight">Schutzengel der Nacht</span>:<br>
+      - Polizist*innen an gefährlichen Einsatzorten<br>
+      - Rettungshundeführer*innen in Trümmern<br>
+      - Notfallseelsorger*innen in dunkelsten Stunden<br><br>
+      
+      <span class="highlight" style="font-size: 1.3em;">
+        Ihr steht dort, wo andere wegschauen.<br>
+        Ihr handelt, wenn andere zögern.
+      </span>
+    </div>
+  </div>
+  
+  <!-- Szene 12 - Danke Teil 2 -->
+  <div class="scene" id="scene12">
+    <div class="time">Danke an unsere stillen Helden</div>
+    <div class="story" style="text-align: center;">
+      An die <span class="highlight">stillen Helden</span>:<br>
+      - THW-Kräfte bei Hochwasser und Katastrophen<br>
+      - Bergwacht bei alpinen Notlagen<br>
+      - Seenotretter*innen auf stürmischer See<br><br>
+      
+      An die <span class="highlight">unsichtbaren Kräfte</span>:<br>
+      - Leitstellendisponent*innen am Telefon<br>
+      - Ehrenamtliche in Hilfsorganisationen<br>
+      - Techniker*innen, die Systeme am Laufen halten<br><br>
+      
+      <span class="highlight" style="font-size: 1.3em;">
+        Ihr seid das Netz, das uns auffängt.<br>
+        Die Hand, die uns hält.<br>
+        Die Hoffnung, wenn unsere schwindet.
+      </span>
+    </div>
+  </div>
+
+  <!-- Szene 13 - Gestohlenes Material -->
+<div class="scene" id="scene13">
+    <div class="time">04:18 Uhr - Einsatzfahrzeug aufgebrochen</div>
+    <div class="story">
+      "Wo ist das Defibrillator-Set?" Der Notarzt durchsucht fieberhaft den Rettungswagen. 
+      Wieder einmal. Die Diebe haben sogar die Ersatz-Sauerstoffflaschen mitgenommen.<br><br>
+      
+      Jetzt, während ein Herzinfarktpatient auf die lebensrettende Ausrüstung wartet, 
+      <span class="highlight">sitzt das Equipment irgendwo in einem Darknet-Auktionshaus</span>.
+      Der RTW muss abgemeldet werden. Wieder einmal.<br><br>
+      
+      <span class="highlight">Jeder Diebstahl kostet nicht nur Geld - sondern Minuten, die über Leben entscheiden.</span>
+    </div>
+  </div>
+  
+  <!-- Szene 14 - Vandalismus -->
+  <div class="scene" id="scene14">
+    <div class="time">15:22 Uhr - Sabotierter Hydrant</div>
+    <div class="story">
+      Die Feuerwehr kommt an - und der Hydrant ist mit Sekundenkleber verstopft. 
+      Wertvolle Minuten vergehen, bis Ersatzsysteme angeschlossen sind.<br><br>
+      
+      Hinter den zerschnittenen Feuerwehrschläuchen von letzter Woche, 
+      den zerkratzten Rettungswagen und den gestohlenen Warnleuchten 
+      <span class="highlight">steht kein "harmloser Streich" - sondern ein Angriff auf uns alle</span>.<br><br>
+      
+      Während Jugendliche ihr "Spaß"-Video posten, brennt ein Kinderzimmer lichterloh.
+    </div>
+  </div>
+  
+  <!-- Szene 15 - Angriffe auf Einsatzkräfte -->
+  <div class="scene" id="scene15">
+    <div class="time">21:47 Uhr - Rettungssanitäter angegriffen</div>
+    <div class="story">
+      "Verpiss dich, das ist mein Bruder!" Der Faustschlag trifft den Sanitäter am Kiefer, 
+      während er versucht, den Überdosierten zu reanimieren.<br><br>
+      
+      <span class="highlight">Jeden Tag erleben 43 Einsatzkräfte in Deutschland körperliche Gewalt</span>. 
+      Beleidigungen, Tritte, Bisse - oft vor laufender Handykamera. 
+      Die Helfer tragen Narben. Und kommen trotzdem wieder.<br><br>
+      
+      Wer hilft eigentlich den Helfern?
+    </div>
+  </div>
+  
+  <!-- Szene 16 - Gaffer & Verkehrsbehinderung -->
+  <div class="scene" id="scene16">
+    <div class="time">08:15 Uhr - Unfallstelle A3</div>
+    <div class="story">
+      Das Martinshorn heult. Die Rettungsgasse? Existiert nicht. 
+      Stattdessen: Hunderte Handys, die aus dem Fenster gehalten werden.<br><br>
+      
+      Der RTW kommt nur im Schritttempo voran. Der Patient im Inneren - 
+      <span class="highlight">vielleicht Ihr Vater, der seinen Herzinfarkt nur dank rascher Hilfe überlebt hätte</span> - 
+      bekommt nicht die Behandlung, die er bräuchte.<br><br>
+      
+      "Interessant" ist kein Menschleben wert.
+    </div>
+  </div>
+  
+  <!-- Szene 17 - Nörgeln & Kritik -->
+  <div class="scene" id="scene17">
+    <div class="time">11:03 Uhr - Einsatzrückkehr</div>
+    <div class="story">
+      "Wegen euch konnte ich nicht parken!" Die Anwohnerin schimpft, 
+      während die Feuerwehrleute ihre schweißnassen Schutzanzüge ausziehen.<br><br>
+      
+      <span class="highlight">Beschwerden über Lärm, über Verspätungen, über "übertriebene" Maßnahmen</span>. 
+      Dabei war es heute wieder knapp - ein Funke hätte gereicht, 
+      und das Haus wäre explodiert.<br><br>
+      
+      Die größte Kränkung? Nicht der fehlende Dank. 
+      Sondern dass manche meinen, ihr Parkplatz sei wichtiger 
+      als das Leben ihrer Nachbarn.
+    </div>
+  </div>
+  
+<!-- Szene X - Der erste Einsatz -->
+<div class="scene" id="scene18">
+    <div class="time">19:32 Uhr - Erstes Großfeuer</div>
+    <div class="story">
+      Seine Hand umklammert den Schlauch so fest, dass die Knöchel weiß werden. "Wasser marsch!", brüllt der Gruppenführer. 
+      Der 19-jährige Max spürt, wie der Rückstoß ihn fast umwirft. Vor drei Tagen hat er noch Pizzas ausgefahren – 
+      jetzt beißt sich der Geruch von brennendem Plastik in seine Lunge.<br><br>
+      
+      Irgendwo im Rauch schreit ein Kind. Er kann es nicht sehen, nur hören. 
+      <span class="highlight">In der Ausbildung hat niemand erwähnt, wie sehr Kinderstimmen in Flammen wehtun</span>.<br><br>
+      
+      Sein Helm trägt jetzt zwei schwarze Streifen. Einen für den Einsatz. Einen für das Leben, das er nie vergessen wird.
+    </div>
+  </div>
+  
+  <!-- Szene Y - Leere Wache -->
+  <div class="scene" id="scene19">
+    <div class="time">06:00 Uhr - Morgenschicht</div>
+    <div class="story">
+      "Wache 3 heute nicht besetzbar." Die Liste an der Pinnwand ist länger geworden: 
+      7 Kollegen in Krankenstand. 3 haben gekündigt. Der Rest hat seit 72 Stunden nicht geschlafen.<br><br>
+      
+      Leitstellendisponentin Sarah muss wieder entscheiden: 
+      <span class="highlight">Schickt sie den einzigen verbliebenen RTW zum Herzinfarkt oder zur bewusstlosen Schwangeren?</span><br><br>
+      
+      In 20 Minuten wird sie "Priorisierung nach Dringlichkeit" in ihr Protokoll schreiben. 
+      Was sie wirklich aufschreiben möchte: "Wir können nicht mehr."
+    </div>
+  </div>
+  
+  <!-- Szene Z - Nach dem Einsatz -->
+  <div class="scene" id="scene20">
+    <div class="time">03:17 Uhr - Wohnzimmer</div>
+    <div class="story">
+      Der Whiskey im Glas zittert. Kommissar Mertens starrt die Akte an – 
+      das Foto des Mädchens, das er gestern aus dem Fluss ziehen musste, lacht ihm entgegen. 
+      Sie könnte seine Tochter sein. Ist sie aber nicht.<br><br>
+      
+      <span class="highlight">Die Statistik nennt es "berufsbedingte Traumafolgestörung". 
+      Seine Frau nennt es "Abwesendsein". Er selbst hat kein Wort dafür</span>.<br><br>
+      
+      Das Funkgerät auf dem Tisch schweigt. Für genau 4 Stunden und 23 Minuten noch.
+    </div>
+  </div>
+
+  <script>
+const scenes = [
+  { id: "scene0", duration: 30000 },   // Intro (Einstieg in die Thematik)
+  { id: "scene1", duration: 30000 },   // Verkehrsunfall (konkreter Einsatz)
+  { id: "scene18", duration: 30000 },  // Der erste Einsatz (Perspektive Neueinsteiger)
+  { id: "scene2", duration: 30000 },   // Wohnungsbrand (dramatischer Einsatz)
+  { id: "scene13", duration: 30000 },  // Gestohlenes Material (erstes Problem)
+  { id: "scene3", duration: 30000 },   // Herzinfarkt (medizinischer Notfall)
+  { id: "scene19", duration: 30000 },  // Leere Wache (Systemversagen)
+  { id: "scene4", duration: 30000 },   // Hochwasser (Katastropheneinsatz)
+  { id: "scene14", duration: 30000 },  // Vandalismus (zweites Problem)
+  { id: "scene5", duration: 30000 },   // Gewalttat (gefährlicher Einsatz)
+  { id: "scene15", duration: 30000 },  // Angriffe auf Einsatzkräfte (drittes Problem)
+  { id: "scene16", duration: 30000 },  // Gaffer & Verkehr (viertes Problem)
+  { id: "scene17", duration: 30000 },  // Nörgeln & Kritik (fünftes Problem)
+  { id: "scene6", duration: 30000 },   // Wartende Familie (emotionale Perspektive)
+  { id: "scene20", duration: 30000 },  // Nach dem Einsatz (psychische Folgen)
+  { id: "scene7", duration: 30000 },   // Innerer Konflikt (Vor-Einsatz-Ängste)
+  { id: "scene8", duration: 30000 },   // Todesnachricht (worst-case-Szenario)
+  { id: "scene9", duration: 25000 },   // Appell Teil 1 (Reflexion)
+  { id: "scene10", duration: 25000 },  // Appell Teil 2 (Perspektivwechsel)
+  { id: "scene11", duration: 25000 },  // Danke Teil 1 (Retter in Uniform)
+  { id: "scene12", duration: 25000 }   // Danke Teil 2 (Stille Helden)
+];
+  
+    let currentScene = 0;
+    let timer;
+  
+    function showScene(index) {
+      clearTimeout(timer);
+      document.querySelectorAll('.scene').forEach(scene => {
+        scene.classList.remove('active');
+      });
+      
+      const scene = document.getElementById(scenes[index].id);
+      scene.classList.add('active');
+      
+      timer = setTimeout(() => {
+        currentScene = (index + 1) % scenes.length;
+        showScene(currentScene);
+      }, scenes[index].duration);
+    }
+  
+    // Start mit Verzögerung
+    setTimeout(() => {
+      showScene(0);
+    }, 1000);
+  
+    // Tastatursteuerung
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') {
+        currentScene = (currentScene + 1) % scenes.length;
+        showScene(currentScene);
+      } else if (e.key === 'ArrowLeft') {
+        currentScene = (currentScene - 1 + scenes.length) % scenes.length;
+        showScene(currentScene);
+      } else if (e.key === ' ') {
+        // Pausentaste
+        const activeScene = document.querySelector('.active');
+        if (activeScene.style.animationPlayState === 'paused') {
+          activeScene.style.animationPlayState = 'running';
+          showScene(currentScene); // Timer neu starten
+        } else {
+          activeScene.style.animationPlayState = 'paused';
+          clearTimeout(timer);
+        }
+      }
+    });
+  
+    // Touchsteuerung für Mobile
+    let touchStartX = 0;
+    document.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+    });
+    document.addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].clientX;
+      const diffX = touchStartX - touchEndX;
+      if (diffX > 50) { // Wisch nach links
+        currentScene = (currentScene + 1) % scenes.length;
+        showScene(currentScene);
+      } else if (diffX < -50) { // Wisch nach rechts
+        currentScene = (currentScene - 1 + scenes.length) % scenes.length;
+        showScene(currentScene);
+      }
+    });
+  </script>
+  </body>
+  </html>
